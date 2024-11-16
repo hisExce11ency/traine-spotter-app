@@ -1,0 +1,68 @@
+/* About Page */
+.about-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
+    /* Prevents the video from overflowing */
+}
+
+/* Video Styling */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the video covers the whole container */
+    z-index: -1;
+    /* Keeps the video in the background */
+}
+
+/* Content Styling */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    /* Semi-transparent background for readability */
+    transform: translate(-50%, -50%);
+    /* Centers the content both horizontally and vertically */
+    color: var(--light-text-color);
+    max-width: 800px;
+    margin: 10px 0;
+    /* font-family: 'Raleway', sans-serif; */
+    /* White text for contrast against the video */
+    text-align: center;
+    z-index: 1;
+    /* Ensures the text is in front of the video */
+
+}
+
+.content h1 {
+    font-size: 1.5pc;
+    /* Size of the title */
+    font-family: 'Railway', sans-serif;
+    color: #ffb347;
+    /* Sunset-inspired color */
+    /* Custom font */
+    margin: 5px;
+}
+
+.content h2 {
+    font-size: 1.2pc;
+    font-family: 'Railway', sans-serif;
+    margin: 5px;
+    color: #ffcc33;
+    /* Highlight color */
+}
+
+.content p {
+    font-size: 1pc;
+    font-family: 'Railway', sans-serif;
+    color: var(--light-text-color);
+    margin: 5px;
+}

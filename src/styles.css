@@ -1,1 +1,253 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Raleway Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+/* Global reset and font styling */
+* {
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+}
+
+/* Sunset-Inspired Color Palette */
+:root {
+    --background-color: #264653;
+    --primary-color: #e76f51;
+    --secondary-color: #2a9d8f;
+    --light-text-color: #fefae0;
+    --sunset-color: #f4a261;
+}
+
+/*
+*Reset CSS model sizing calculations
+*/
+
+html {
+    box-sizing: border-box;
+
+}
+
+/* Apply font globally */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font: 18px/1.5 'Raleway', sans-serif;
+}
+
+body,
+form,
+input,
+textarea,
+option,
+select,
+button {
+    font: inherit;
+}
+
+ul,
+ol {
+    padding-bottom: 1.5em;
+}
+
+ul,
+ol {
+    padding-left: 2.5em;
+}
+
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p+h1,
+p+h2,
+p+h3,
+p+h4,
+p+h5,
+p+h6 {
+    padding-top: 0.5em;
+}
+
+blockquote {
+    padding: 0 2.5em;
+    border-left: 2px solid #000000;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 1.5em;
+}
+
+blockquote,
+p {
+    font-style: italic;
+}
+
+blockquote p+p {
+    padding-top: 1.5em;
+}
+
+blockquote p:last-child {
+    padding-bottom: 0;
+}
+
+blockquote p.author {
+    text-align: right;
+}
+
+/* Body styling */
+body {
+
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+    font-optical-sizing: auto;
+    background-color: var(--background-color);
+    color: var(--light-text-color);
+
+    /* Ensure footer is at the bottom */
+}
+
+/* Ensure content fills the available space, keeping footer at the bottom */
+.main-content {
+    flex: 1;
+    /* Take up all available space */
+    overflow: visible;
+    /* Prevent scrollbars in the main content */
+    padding: 20px;
+    /* Add some padding to the content */
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* Links and other global styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Styling for paragraphs and blockquotes */
+blockquote,
+p {
+    font-style: italic;
+}
+
+/* Buttons styling */
+button {
+    background-color: var(--primary-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
