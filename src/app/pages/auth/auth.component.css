@@ -1,0 +1,140 @@
+/* General styling */
+:root {
+    --background-color: #264653;
+    --primary-color: #e76f51;
+    --secondary-color: #2a9d8f;
+    --light-text-color: #fefae0;
+    --sunset-color: #f4a261;
+    --disabled-color: rgba(255, 255, 255, 0.5);
+    /* For disabled buttons */
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Layout styling */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--light-text-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px var(--box-shadow-color);
+    color: var(--background-color);
+}
+
+.form-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--background-color);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--background-color);
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    /* Subtle placeholder color */
+}
+
+/* Action buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--sunset-color);
+}
+
+.btn-primary:disabled {
+    background-color: var(--disabled-color);
+    color: rgba(0, 0, 0, 0.3);
+    /* Greyed-out text */
+    cursor: not-allowed;
+    /* Show non-interactive cursor */
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--sunset-color);
+}
+
+/* Remove hover effect for disabled buttons */
+button:disabled:hover {
+    background-color: var(--disabled-color);
+    /* No hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}

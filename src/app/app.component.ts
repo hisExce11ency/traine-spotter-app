@@ -4,7 +4,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomeComponent } from "./pages/home/home.component";
 import { AboutComponent } from './pages/about/about.component';
-import { AuthComponent } from './auth/auth.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 @Component({
   selector: 'app-root',
